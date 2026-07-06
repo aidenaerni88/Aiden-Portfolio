@@ -21,7 +21,7 @@
     </div>
 
     <header class="site-header">
-        <a class="brand" href="#home" aria-label="Aiden Aerni home">
+        <a class="brand" href="#about-me" aria-label="Aiden Aerni home">
             <span class="brand-mark">AA</span>
             <span>Aiden Aerni</span>
         </a>
@@ -32,168 +32,75 @@
             <span></span>
         </button>
 
-        <nav class="nav-links" aria-label="Primary navigation">
-            <a href="#assembly">Assembly</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+        <nav class="nav-links" role="tablist" aria-label="Portfolio sections">
+            <button class="site-tab is-active" type="button" role="tab" id="about-me-tab" aria-selected="true" aria-controls="about-me" data-tab-target="about-me">About Me</button>
+            <button class="site-tab" type="button" role="tab" id="education-tab" aria-selected="false" aria-controls="education" tabindex="-1" data-tab-target="education">Education</button>
+            <button class="site-tab" type="button" role="tab" id="projects-tab" aria-selected="false" aria-controls="projects" tabindex="-1" data-tab-target="projects">Projects</button>
+            <button class="site-tab" type="button" role="tab" id="skills-tab" aria-selected="false" aria-controls="skills" tabindex="-1" data-tab-target="skills">Skills</button>
+            <button class="site-tab" type="button" role="tab" id="hobbies-tab" aria-selected="false" aria-controls="hobbies" tabindex="-1" data-tab-target="hobbies">Hobbies</button>
+            <button class="site-tab" type="button" role="tab" id="contact-tab" aria-selected="false" aria-controls="contact" tabindex="-1" data-tab-target="contact">Contact</button>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero section-band">
-            <div class="hero-copy reveal">
-                <p class="eyebrow">Mechanical Engineering | Product Design | Manufacturing</p>
-                <h1>Aiden Aerni</h1>
-                <p class="hero-text">
-                    I build practical mechanical systems from first sketch to tested assembly, combining CAD,
-                    analysis, fabrication, and data-driven iteration.
-                </p>
-                <div class="button-row">
-                    <a class="button primary" href="Engineeringresume.pdf" download="AidenAerniResume.pdf">Resume</a>
-                    <a class="button secondary" href="Coverletterengineering.pdf" download="AidenAerniCoverLetter.pdf">Cover Letter</a>
+        <section id="about-me" class="tab-panel" role="tabpanel" aria-labelledby="about-me-tab">
+            <div class="landscape-banner reveal" aria-label="Landscape image placeholder">
+                <div class="landscape-banner-content">
+                    <p>Mechanical Engineering Portfolio</p>
+                    <h1>Aiden Aerni</h1>
                 </div>
             </div>
 
-            <div class="hero-portrait reveal">
-                <img src="images/aiden_picture.jpg" alt="Aiden Aerni">
-                <div class="orbit-ring ring-one"></div>
-                <div class="orbit-ring ring-two"></div>
+            <div class="hero section-band">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Mechanical Engineering | Product Design | Manufacturing</p>
+                    <h2>Practical engineering from concept to tested assembly.</h2>
+                    <p class="hero-text">
+                        I build practical mechanical systems from first sketch to tested assembly, combining CAD,
+                        analysis, fabrication, and data-driven iteration.
+                    </p>
+                    <div class="button-row">
+                        <a class="button primary" href="Engineeringresume.pdf" download="AidenAerniResume.pdf">Resume</a>
+                        <a class="button secondary" href="Coverletterengineering.pdf" download="AidenAerniCoverLetter.pdf">Cover Letter</a>
+                    </div>
+                </div>
+
+                <div class="hero-portrait reveal">
+                    <img src="images/aiden_picture.jpg" alt="Aiden Aerni">
+                    <div class="orbit-ring ring-one"></div>
+                    <div class="orbit-ring ring-two"></div>
+                </div>
             </div>
+
+            <div class="about section-band">
+                <div class="about-copy reveal">
+                    <p class="eyebrow">About Me</p>
+                    <h2>Hands-on engineering with a designer's sense of finish.</h2>
+                    <p>
+                        I am a Mechanical Engineering student at Oregon State University focused on product design and
+                        manufacturing. My work blends SolidWorks modeling, prototyping, Python analysis, and clear technical
+                        communication so ideas can become assemblies people can actually build, test, and improve.
+                    </p>
+                </div>
+                <div class="stats-grid reveal">
+                    <div>
+                        <strong>CAD</strong>
+                        <span>SolidWorks and AutoCAD design workflows</span>
+                    </div>
+                    <div>
+                        <strong>Build</strong>
+                        <span>3D printing, fabrication, and prototype iteration</span>
+                    </div>
+                    <div>
+                        <strong>Analyze</strong>
+                        <span>Python, R, Excel, and engineering documentation</span>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        <section id="assembly" class="assembly section-band">
-            <div class="section-heading reveal">
-                <p class="eyebrow">Live STL Preview</p>
-                <h2>Main Assembly</h2>
-                <p>
-                    Rotate, pan, and zoom the capstone sumobot assembly directly in the browser. The model is served
-                    from the project files in this repository.
-                </p>
-            </div>
-
-            <div class="viewer-shell reveal">
-                <div id="model-viewer" class="model-viewer" data-model-src="assets/models/main-assembly.stl">
-                    <div class="viewer-status">Loading 3D assembly...</div>
-                </div>
-                <div class="viewer-toolbar">
-                    <button class="icon-button" type="button" id="reset-view" aria-label="Reset 3D view" title="Reset view">
-                        <span>Reset</span>
-                    </button>
-                    <button class="icon-button" type="button" id="toggle-spin" aria-label="Toggle model rotation" title="Toggle spin">
-                        <span>Spin</span>
-                    </button>
-                    <a class="button secondary" href="assets/models/main-assembly.stl" download>Download STL</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about section-band">
-            <div class="about-copy reveal">
-                <p class="eyebrow">About</p>
-                <h2>Hands-on engineering with a designer's sense of finish.</h2>
-                <p>
-                    I am a Mechanical Engineering student at Oregon State University focused on product design and
-                    manufacturing. My work blends SolidWorks modeling, prototyping, Python analysis, and clear technical
-                    communication so ideas can become assemblies people can actually build, test, and improve.
-                </p>
-            </div>
-            <div class="stats-grid reveal">
-                <div>
-                    <strong>CAD</strong>
-                    <span>SolidWorks and AutoCAD design workflows</span>
-                </div>
-                <div>
-                    <strong>Build</strong>
-                    <span>3D printing, fabrication, and prototype iteration</span>
-                </div>
-                <div>
-                    <strong>Analyze</strong>
-                    <span>Python, R, Excel, and engineering documentation</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills-section section-band">
-            <div class="section-heading reveal">
-                <p class="eyebrow">Toolbox</p>
-                <h2>Engineering and technical skills</h2>
-            </div>
-
-            <div class="skills-grid reveal">
-                <div class="skill"><img src="images/solidworks.png" alt="SolidWorks"><span>SolidWorks</span></div>
-                <div class="skill"><img src="images/autocad.png" alt="AutoCAD"><span>AutoCAD</span></div>
-                <div class="skill"><img src="images/python_logo.png" alt="Python"><span>Python</span></div>
-                <div class="skill"><img src="images/R_logo.png" alt="R"><span>R</span></div>
-                <div class="skill"><img src="images/Excel-Logo.png" alt="Excel"><span>Excel</span></div>
-                <div class="skill"><img src="images/Git_logo.png" alt="Git"><span>Git</span></div>
-                <div class="skill"><img src="images/Confluence_Logo.png" alt="Confluence"><span>Confluence</span></div>
-                <div class="skill"><img src="images/powerpoint.png" alt="PowerPoint"><span>PowerPoint</span></div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects section-band">
-            <div class="section-heading reveal">
-                <p class="eyebrow">Capstone</p>
-                <h2>Sumobot design archive</h2>
-                <p>Project documents and drawings are linked from the capstone folder so they load correctly from the site.</p>
-            </div>
-
-            <div class="project-grid reveal">
-                <article class="project-card">
-                    <h3>Final Report</h3>
-                    <p>Full project report for Team Orange's MIME 498 sumobot.</p>
-                    <div class="project-actions">
-                        <a href="assets/docs/sumobot-final-report.pdf" target="_blank" rel="noreferrer">View PDF</a>
-                        <a href="assets/docs/sumobot-final-report.pdf" download>Download</a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <h3>Capstone Drawings</h3>
-                    <p>Spring 2026 mechanical drawing package for the assembly.</p>
-                    <div class="project-actions">
-                        <a href="assets/docs/spring-2026-capstone-drawings.pdf" target="_blank" rel="noreferrer">View PDF</a>
-                        <a href="assets/docs/spring-2026-capstone-drawings.pdf" download>Download</a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <h3>Design Proposal</h3>
-                    <p>WIC design proposal and technical writing deliverable.</p>
-                    <div class="project-actions">
-                        <a href="assets/docs/sumobot-design-proposal.pdf" target="_blank" rel="noreferrer">View PDF</a>
-                        <a href="assets/docs/sumobot-design-proposal.pdf" download>Download</a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <h3>Team Charter</h3>
-                    <p>Team structure, responsibilities, and project operating plan.</p>
-                    <div class="project-actions">
-                        <a href="assets/docs/sumobot-team-charter.pdf" target="_blank" rel="noreferrer">View PDF</a>
-                        <a href="assets/docs/sumobot-team-charter.pdf" download>Download</a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <h3>Self-Learned Skill</h3>
-                    <p>Creality 3D printing skill documentation for prototyping.</p>
-                    <div class="project-actions">
-                        <a href="assets/docs/creality-3d-print-skill.pdf" target="_blank" rel="noreferrer">View PDF</a>
-                        <a href="assets/docs/creality-3d-print-skill.pdf" download>Download</a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <h3>Reflection</h3>
-                    <p>Project reflection draft and process notes.</p>
-                    <div class="project-actions">
-                        <a href="assets/docs/reflection-draft.pdf" target="_blank" rel="noreferrer">View PDF</a>
-                        <a href="assets/docs/reflection-draft.pdf" download>Download</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="education" class="education section-band">
+        <section id="education" class="tab-panel education section-band" role="tabpanel" aria-labelledby="education-tab" hidden>
             <div class="section-heading reveal">
                 <p class="eyebrow">Education</p>
                 <h2>Academic path</h2>
@@ -212,7 +119,249 @@
             </div>
         </section>
 
-        <section id="contact" class="contact section-band">
+        <section id="projects" class="tab-panel projects section-band" role="tabpanel" aria-labelledby="projects-tab" hidden>
+            <div class="section-heading reveal">
+                <p class="eyebrow">College Projects</p>
+                <h2>Project library</h2>
+                <p>Six projects spanning mechanical design, CAD/CAM, manufacturing, mechatronics, controls, and component analysis.</p>
+            </div>
+
+            <div class="project-feature reveal">
+                <div>
+                    <p class="project-kicker">Oregon State University - Engineering Portfolio</p>
+                    <h3>From analysis to working hardware</h3>
+                    <p>This library brings together individual and team work from across my college experience. Select a discipline to focus the collection or browse every project below.</p>
+                </div>
+                <div class="project-feature-actions">
+                    <a class="button primary" href="#project-panel">Browse all projects</a>
+                    <a class="button secondary" href="#interactive-models">Open interactive models</a>
+                </div>
+            </div>
+
+            <div class="project-browser reveal">
+                <div class="project-tabs" role="tablist" aria-label="Filter project materials">
+                    <button class="project-tab is-active" type="button" role="tab" id="tab-all" aria-selected="true" aria-controls="project-panel" data-project-filter="all">All projects <span>6</span></button>
+                    <button class="project-tab" type="button" role="tab" id="tab-design" aria-selected="false" aria-controls="project-panel" tabindex="-1" data-project-filter="design">Design &amp; manufacturing <span>5</span></button>
+                    <button class="project-tab" type="button" role="tab" id="tab-mechatronics" aria-selected="false" aria-controls="project-panel" tabindex="-1" data-project-filter="mechatronics">Mechatronics <span>2</span></button>
+                </div>
+
+                <div id="project-panel" class="project-grid" role="tabpanel" aria-labelledby="tab-all">
+                    <article class="project-card" data-project-category="design">
+                        <img class="project-card-image" src="assets/projects/sumobot/sumobot-isometric.jpg" alt="Completed Team Orange Sumobot viewed from above" loading="lazy">
+                        <div class="project-card-meta"><span>Capstone - MIME 498</span><span>2026</span></div>
+                        <h3>Autonomous Sumobot</h3>
+                        <p>A competition robot developed through CAD, prototyping, fabrication, testing, and a complete engineering handoff.</p>
+                        <div class="project-actions">
+                            <button class="project-toggle" type="button" aria-expanded="false">Open files</button>
+                            <a href="#interactive-models">3D preview</a>
+                        </div>
+                        <div class="project-files" hidden>
+                            <h4>Related files</h4>
+                            <a href="assets/docs/sumobot-final-report.pdf" target="_blank" rel="noreferrer"><span>PDF</span> Final report</a>
+                            <a href="assets/docs/spring-2026-capstone-drawings.pdf" target="_blank" rel="noreferrer"><span>PDF</span> Spring 2026 capstone drawings</a>
+                            <a href="assets/docs/sumobot-design-proposal.pdf" target="_blank" rel="noreferrer"><span>PDF</span> Design proposal</a>
+                            <a href="assets/docs/sumobot-team-charter.pdf" target="_blank" rel="noreferrer"><span>PDF</span> Team charter</a>
+                            <a href="assets/docs/reflection-draft.pdf" target="_blank" rel="noreferrer"><span>PDF</span> Reflection draft</a>
+                            <a href="assets/docs/creality-3d-print-skill.pdf" target="_blank" rel="noreferrer"><span>PDF</span> 3D print self-learning skill</a>
+                            <a href="assets/models/main-assembly.stl" download><span>STL</span> Main assembly model</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project-category="design">
+                        <img class="project-card-image" src="assets/projects/gas-cap/gas-cap-isometric.png" alt="Isometric CAD view of the aluminum gas cap" loading="lazy">
+                        <div class="project-card-meta"><span>CAD/CAM - ME 413</span><span>Manufacturing</span></div>
+                        <h3>Vehicle Gas Cap</h3>
+                        <p>A 6061 aluminum replacement cap for a 2000 Jeep Cherokee, including 4-axis CNC strategy, tooling, fixturing, and production-cost analysis.</p>
+                        <div class="project-actions">
+                            <button class="project-toggle" type="button" aria-expanded="false">Open files</button>
+                        </div>
+                        <div class="project-files" hidden>
+                            <h4>Related files</h4>
+                            <a href="assets/projects/gas-cap/final-project.pdf" target="_blank" rel="noreferrer"><span>PDF</span> Final project</a>
+                            <a href="assets/projects/gas-cap/gas-cap-model.step" download><span>STEP</span> Gas cap model</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project-category="design mechatronics">
+                        <img class="project-card-image" src="assets/projects/marshmallow-roaster/cover.png" alt="CAD views of the automatic marshmallow roaster" loading="lazy">
+                        <div class="project-card-meta"><span>Product development - ME 382</span><span>2024</span></div>
+                        <h3>Automatic Marshmallow Roaster</h3>
+                        <p>A heat-resistant, adjustable device that automatically rotates food over a fire, developed from requirements through prototype.</p>
+                        <div class="project-actions">
+                            <button class="project-toggle" type="button" aria-expanded="false">Open files</button>
+                        </div>
+                        <div class="project-files" hidden>
+                            <h4>Related files</h4>
+                            <a href="assets/projects/marshmallow-roaster/assembly-drawing.pdf" target="_blank" rel="noreferrer"><span>PDF</span> Assembly drawing</a>
+                            <a href="assets/projects/marshmallow-roaster/final-presentation.pptx" download><span>PPTX</span> Final presentation</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project-category="design">
+                        <div class="project-card-image project-card-placeholder" aria-hidden="true"><span>DFM</span></div>
+                        <div class="project-card-meta"><span>Design for manufacturing</span><span>CAD</span></div>
+                        <h3>Socket Sorter</h3>
+                        <p>A custom-component sorting assembly documented with a manufacturing drawing package and downloadable STL model.</p>
+                        <div class="project-actions">
+                            <button class="project-toggle" type="button" aria-expanded="false">Open files</button>
+                        </div>
+                        <div class="project-files" hidden>
+                            <h4>Related files</h4>
+                            <a href="assets/projects/socket-sorter/custom-component-drawings.pdf" target="_blank" rel="noreferrer"><span>PDF</span> Custom component drawings</a>
+                            <a href="assets/projects/socket-sorter/socket-sorter-assembly.stl" download><span>STL</span> Socket sorter assembly</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project-category="mechatronics">
+                        <img class="project-card-image" src="assets/projects/pid-ventilation/cover.png" alt="Arduino, humidity sensor, and servo prototype for greenhouse ventilation" loading="lazy">
+                        <div class="project-card-meta"><span>Controls - Arduino</span><span>Mechatronics</span></div>
+                        <h3>PID-Controlled Ventilation</h3>
+                        <p>An automated greenhouse vent using a humidity sensor, Arduino, filtered measurements, and servo control to target 60% humidity.</p>
+                        <div class="project-actions">
+                            <button class="project-toggle" type="button" aria-expanded="false">Open files</button>
+                        </div>
+                        <div class="project-files" hidden>
+                            <h4>Related files</h4>
+                            <a href="assets/projects/pid-ventilation/pid-ventilation-report.pdf" target="_blank" rel="noreferrer"><span>PDF</span> PID ventilation report</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project-category="design">
+                        <div class="project-card-image project-card-placeholder" aria-hidden="true"><span>FEA</span></div>
+                        <div class="project-card-meta"><span>Component analysis</span><span>Archive</span></div>
+                        <h3>Car Seat Mount Analysis</h3>
+                        <p>A college component-analysis project reserved in the portfolio archive. The source folder is present but currently contains no exportable files.</p>
+                        <div class="project-actions">
+                            <button class="project-toggle" type="button" aria-expanded="false">Open files</button>
+                        </div>
+                        <div class="project-files project-files-empty" hidden>
+                            <h4>Related files</h4>
+                            <p class="project-note">Project media coming soon</p>
+                        </div>
+                    </article>
+                </div>
+                <p class="project-empty" hidden>No materials are available in this category yet.</p>
+            </div>
+
+            <div id="interactive-models" class="interactive-models reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">Interactive Models</p>
+                    <h2>Rotate, pan, and zoom project hardware</h2>
+                    <p>Explore the capstone sumobot, socket sorter assembly, and gas cap CAD model directly in the browser.</p>
+                </div>
+
+                <div class="model-grid">
+                    <article class="model-card">
+                        <div class="model-card-heading">
+                            <div>
+                                <p class="project-kicker">Capstone</p>
+                                <h3>Sumobot Main Assembly</h3>
+                            </div>
+                            <a href="assets/models/main-assembly.stl" download>Download STL</a>
+                        </div>
+                        <div class="model-viewer" data-model-src="assets/models/main-assembly.stl" data-model-type="stl">
+                            <div class="viewer-status">Loading sumobot assembly...</div>
+                        </div>
+                        <div class="viewer-toolbar">
+                            <button class="icon-button" type="button" data-viewer-action="reset" aria-label="Reset Sumobot view" title="Reset view">
+                                <span>Reset</span>
+                            </button>
+                            <button class="icon-button" type="button" data-viewer-action="spin" aria-label="Toggle Sumobot rotation" title="Toggle spin">
+                                <span>Spin</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="model-card">
+                        <div class="model-card-heading">
+                            <div>
+                                <p class="project-kicker">Design for Manufacturing</p>
+                                <h3>Socket Sorter Assembly</h3>
+                            </div>
+                            <a href="assets/projects/socket-sorter/socket-sorter-assembly.stl" download>Download STL</a>
+                        </div>
+                        <div class="model-viewer" data-model-src="assets/projects/socket-sorter/socket-sorter-assembly.stl" data-model-type="stl">
+                            <div class="viewer-status">Loading socket sorter assembly...</div>
+                        </div>
+                        <div class="viewer-toolbar">
+                            <button class="icon-button" type="button" data-viewer-action="reset" aria-label="Reset Socket Sorter view" title="Reset view">
+                                <span>Reset</span>
+                            </button>
+                            <button class="icon-button" type="button" data-viewer-action="spin" aria-label="Toggle Socket Sorter rotation" title="Toggle spin">
+                                <span>Spin</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="model-card">
+                        <div class="model-card-heading">
+                            <div>
+                                <p class="project-kicker">CAD/CAM</p>
+                                <h3>Gas Cap Model</h3>
+                            </div>
+                            <a href="assets/projects/gas-cap/gas-cap-model.step" download>Download STEP</a>
+                        </div>
+                        <div class="model-viewer" data-model-src="assets/projects/gas-cap/gas-cap-model.step" data-model-type="step">
+                            <div class="viewer-status">Loading gas cap STEP model...</div>
+                        </div>
+                        <div class="viewer-toolbar">
+                            <button class="icon-button" type="button" data-viewer-action="reset" aria-label="Reset Gas Cap view" title="Reset view">
+                                <span>Reset</span>
+                            </button>
+                            <button class="icon-button" type="button" data-viewer-action="spin" aria-label="Toggle Gas Cap rotation" title="Toggle spin">
+                                <span>Spin</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="tab-panel skills-section section-band" role="tabpanel" aria-labelledby="skills-tab" hidden>
+            <div class="section-heading reveal">
+                <p class="eyebrow">Toolbox</p>
+                <h2>Engineering and technical skills</h2>
+            </div>
+
+            <div class="skills-grid reveal">
+                <div class="skill"><img src="images/solidworks.png" alt="SolidWorks"><span>SolidWorks</span></div>
+                <div class="skill"><img src="images/autocad.png" alt="AutoCAD"><span>AutoCAD</span></div>
+                <div class="skill"><img src="images/python_logo.png" alt="Python"><span>Python</span></div>
+                <div class="skill"><img src="images/R_logo.png" alt="R"><span>R</span></div>
+                <div class="skill"><img src="images/Excel-Logo.png" alt="Excel"><span>Excel</span></div>
+                <div class="skill"><img src="images/Git_logo.png" alt="Git"><span>Git</span></div>
+                <div class="skill"><img src="images/Confluence_Logo.png" alt="Confluence"><span>Confluence</span></div>
+                <div class="skill"><img src="images/powerpoint.png" alt="PowerPoint"><span>PowerPoint</span></div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="tab-panel hobbies section-band" role="tabpanel" aria-labelledby="hobbies-tab" hidden>
+            <div class="section-heading reveal">
+                <p class="eyebrow">Hobbies</p>
+                <h2>What keeps me curious outside class</h2>
+                <p>
+                    I enjoy projects and activities that keep my hands busy, my design instincts sharp, and my problem-solving
+                    grounded in real materials and real constraints.
+                </p>
+            </div>
+
+            <div class="hobbies-grid reveal">
+                <article class="hobby-card">
+                    <h3>Making and prototyping</h3>
+                    <p>3D printing, shop work, and small mechanical builds that turn ideas into objects I can test.</p>
+                </article>
+                <article class="hobby-card">
+                    <h3>Outdoor exploration</h3>
+                    <p>Time outside helps me reset and notice the mechanics, materials, and design details in everyday systems.</p>
+                </article>
+                <article class="hobby-card">
+                    <h3>Learning new tools</h3>
+                    <p>I like experimenting with software, workflows, and documentation habits that make engineering work clearer.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="tab-panel contact section-band" role="tabpanel" aria-labelledby="contact-tab" hidden>
             <div class="section-heading reveal">
                 <p class="eyebrow">Contact</p>
                 <h2>Let's build something useful.</h2>
@@ -251,6 +400,7 @@
             }
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/occt-import-js@0.0.23/dist/occt-import-js.js"></script>
     <script type="module" src="script.js"></script>
 </body>
 
